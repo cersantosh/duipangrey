@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 30px;
+    text-transform: capitalize;
+}
+
+table {
+    width: 70%;
+}
+
+table caption {
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* border: 3px solid red; */
+}
+
+table caption div {
+    width: 50%;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+
+th {
+    background-color: #019779;
+    color: white;
+
+
+}
+
+th,
+td {
+    /* border: 3px solid red; */
+    border-radius: 5px;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+td {
+    color: white;
+    font-weight: bold;
+    background-color: #313c4e;
+}
+
+.show_email {
+    text-transform: none;
+}
+
+.container {
+    width: 100%;
+    /* border: 3px solid rebeccapurple; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image_details {
+    /* border: 3px solid black; */
+    border: 2px solid red;
+
+    width: 300px;
+    position: relative;
+}
+
+.image_details:hover>span {
+    visibility: visible;
+}
+
+.image_prev,
+.image_next {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.image_prev {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 5px;
+}
+
+.image_next {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 5px;
+}
+
+.image_details img {
+    width: 100%;
+    height: auto;
+    /* border: 3px solid blue; */
+    display: none;
+}
+
+.bikes_information,
+.address_information,
+.contact_information {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttons button {
+    padding: 10px;
+    background-color: blue;
+    margin-top: 20px;
+    width: 150px;
+    font-size: 17px;
+    /* font-weight: bold; */
+    border-radius: 10px;
+    border: none;
+}
+
+.buttons button a {
+    color: white;
+}
+
+@media only screen and (max-width: 950px) {
+    table {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    table {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+        width: 99%;
+    }
+
+    th,
+    td {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 560px) {
+    table caption div {
+        width: 80%;
+    }
+}

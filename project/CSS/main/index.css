@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+body {
+    margin: 20px;
+    text-transform: capitalize;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* working on nav bar for mobile */
+
+.nav_bar_mobile {
+    width: 100%;
+    background-color: #7f8c8d;
+    /* border: 3px solid blue; */
+    display: none;
+    font-family: sans-serif;
+}
+
+
+
+.nav_bar_icon {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* border: 3px solid red; */
+    font-size: 30px;
+    color: white;
+    height: 50px;
+    margin-right: 6px;
+}
+
+.nav_bar_icon_home {
+    width: 100%;
+    background-color: #636e72;
+    height: 50px;
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* border: 3px solid red; */
+    font-size: 30px;
+    color: white;
+}
+
+.nav_bar_home_show_hide {
+    display: none;
+}
+
+.nav_bar_icon_home i {
+    margin-right: 3px;
+}
+
+.links_mobile {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.links_mobile li {
+    /* border: 3px solid blue; */
+    padding: 5px;
+    margin-left: 20px;
+    border-bottom: 1px solid white;
+}
+
+.links_mobile li a,
+.profile {
+    color: white;
+    font-weight: 400;
+}
+
+.links_mobile li:hover {
+    background-color: red;
+}
+
+.profile_wrapper {
+    /* border: 3px solid black; */
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+.profile_details img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile_details {
+    width: 400px;
+    height: 400px;
+    /* background-color: rgb(13, 162, 162); */
+    background-color: #30336b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    right: 15px;
+    top: 65px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.profile_details .email {
+    text-transform: none;
+    margin-top: 10px;
+}
+
+.container {
+    /* border: 3px solid black; */
+}
+
+
+
+.nav_bar,
+.nav_bar_home {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    /* border: 3px solid red; */
+    background-color: #0984e3;
+    font-family: sans-serif;
+}
+
+.nav_bar>div,
+.nav_bar_home>div {
+    width: 90%;
+    /* border: 3px solid pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_bar_home>div {
+    width: 50%;
+}
+
+
+
+.logo {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.links,
+.links_home {
+    list-style: none;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+
+.links_home {
+    width: 80%;
+    /* border: 3px solid red; */
+}
+
+.links li {
+    /* border: 3px solid red; */
+}
+
+.links li.profile,
+.links li a,
+.links_home li a {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.links li:hover,
+.links_home li:hover {
+    /* background-color: #2C3A47; */
+    border: 3px solid white;
+    padding: 3px;
+}
+
+
+
+
+.search_details {
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+
+.search_data {
+    /* border: 3px solid red; */
+    background-color: #353b48;
+    color: white;
+    padding: 10px 20px;
+    min-width: 100px;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+
+.search_details>div {
+    width: 40%;
+    height: 40px;
+    position: relative;
+    /* border: 3px solid black; */
+}
+
+.search_details>div i {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    /* border: 3px solid red; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+
+.search_details input {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    font-size: 19px;
+    border-radius: 40px;
+    background-color: #2C3A47;
+    background-color: green;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.search_details input::placeholder {
+    font-size: 14px;
+    /* color: rgba(255, 255, 255, 0.85); */
+    color: #05c46b;
+    color: white;
+    opacity: 0.85;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.search_icon {
+    font-size: 19px;
+}
+
+.filter_show_hide {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filter_show_hide button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+}
+
+.filter_show_hide button span {
+    font-size: 10px;
+    color: white;
+}
+
+.filter_show_hide button i {
+    color: white;
+    font-size: 20px;
+}
+
+.show_hide_filter {
+    display: block !important;
+}
+
+.company_filter .company_name,
+.lot_no,
+.district {
+    width: 150px;
+    height: 35px;
+    border: 3px solid black;
+}
+
+/* working on most popular section */
+
+.popular_text {
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: red;
+    width: 120px;
+    color: white;
+    padding: 5px 5px 5px 7px;
+    font-family: sans-serif;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-top: 20px;
+
+}
+
+.bikes_scooters {
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+    /* border: 3px solid red; */
+}
+
+.popular_bikes,
+.popular_scooters {
+    display: none;
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #c9396f;
+    /* background-color: green; */
+    color: white;
+    font-family: Verdana;
+    margin-right: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.focus_bikes {
+    outline: 3px solid red;
+    outline-offset: 2px;
+}
+
+.focus_scooters {
+    outline: 3px solid red;
+    outline-offset: 2px;
+}
+
+.popular .products_wrapper {
+    margin-bottom: 160px;
+}
+
+.products_details {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 360px);
+    grid-gap: 20px;
+    /* border: 3px solid blue; */
+    position: relative;
+    /* box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75); */
+    background: #e0e0e0;
+    box-shadow: 7px 7px 14px #bebebe,
+        -7px -7px 14px #ffffff;
+
+}
+
+.products_details:hover>span {
+    visibility: visible;
+}
+
+.products:hover {
+    transform: scale(1.05);
+}
+
+.products_wrapper {
+    /* border: 3px solid red; */
+    display: none;
+}
+
+.background {
+    background-color: green !important;
+}
+
+.image_details {
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.image_details:hover>span {
+    visibility: visible;
+}
+
+.image_prev,
+.image_next {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.image_prev {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.image_next {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 0;
+}
+
+.link_image {
+    /* border: 3px solid red; */
+    width: 100%;
+    height: 220px;
+}
+
+.link_image img {
+    width: 100%;
+    height: 220px;
+    border: 2px solid blue;
+    display: none;
+}
+
+.previous,
+.next {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.previous {
+    position: absolute;
+    top: 48%;
+    left: 0;
+}
+
+.next {
+    position: absolute;
+    top: 48%;
+    right: 0;
+}
+
+.products {
+    background-color: #1e90ff;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
+    /* font-weight: bold; */
+    /* box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 7px 7px 14px #bebebe,
+        -7px -7px 14px #ffffff;
+
+}
+
+.products *:not(.image, .link_image, .image_details) {
+    margin-top: 10px;
+}
+
+.products button {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    background-color: none;
+    /* margin-bottom: 30px; */
+}
+
+.products button a {
+    font-family: sans-serif;
+}
+
+
+
+.filter_details {
+    /* border: 3px solid green; */
+    margin-top: 30px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: none;
+    background-color: #e9edf2;
+}
+
+
+.filter_details p {
+    margin-bottom: 10px;
+}
+
+.filter_details form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter_details form>div>div {
+    padding: 5px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    /* border: 3px solid blue; */
+    background-color: white;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 12px white,
+        -8px -8px 12px #ffffff;
+}
+
+.filter_details form>div>div button {
+    /* border: 3px solid red; */
+    width: 45px;
+    height: 25px;
+    margin-top: 9px;
+    background-color: #3b5bb3;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.see_more {
+    cursor: pointer;
+    margin-top: 9px;
+    color: red;
+    font-weight: bold;
+    /* border: 3px solid red; */
+}
+
+.bikes_information_filter {
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+
+
+.bikes_information_filter>div {
+    width: calc(100% / 6);
+    /* border: 3px solid red; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.location_filter {
+    /* border: 3px solid blue; */
+}
+
+.district_filter {
+    /* border: 3px solid cadetblue; */
+    margin-bottom: 20px;
+}
+
+.city_filter {
+    /* border: 3px solid darkgoldenrod; */
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 20px;
+}
+
+.price_filter input {
+    height: 30px;
+    padding: 5px;
+    border: 2px solid green;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.price_filter input::placeholder {
+    color: black;
+    font-family: sans-serif;
+}
+
+.price_filter input:focus {
+    outline: none;
+}
+
+.filter_button {
+    width: 100%;
+    text-align: center;
+}
+
+.filter_button input {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    font-size: 17px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    /* border: 3px solid red; */
+    color: white;
+}
+
+.filter_details div:has(input[type="checkbox"]):not(.category_filter, .company_filter_bikes, .company_filter_scooters, .lot_number_filter_bikes, .lot_number_filter_scooters, .location_filter_bikes, .location_filter_scooters, .district_filter_bikes, .district_filter_scooters, .bikes_information_filter) {
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.buttons button {
+    width: 70px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.no_products_details {
+    display: flex;
+    justify-content: center;
+    /* border: 3px solid red; */
+    margin-top: 30px;
+}
+
+.no_products {
+    width: 30%;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.sticky {
+    position: fixed;
+    left: 20px;
+    width: calc(100% - 40px);
+    top: 0;
+    z-index: 20;
+}
+
+footer {
+    width: 100%;
+    background-color: #0984e3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+
+}
+
+footer>div:first-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer>div:nth-child(2) {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+footer ul li a {
+    color: white;
+
+}
+
+.social_icons i {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+    /* border: 3px solid red; */
+}
+
+@media only screen and (max-width: 1175px) {
+    .links {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1395px) {
+    .products_details {
+        grid-template-columns: repeat(4, 320px);
+        grid-template-rows: repeat(2, 360px);
+        place-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 1395px) {
+    .products_details {
+        grid-template-columns: repeat(3, 320px);
+        grid-template-rows: repeat(3, 360px);
+        place-content: center;
+    }
+
+    .bikes_information_filter {
+        flex-direction: column;
+    }
+
+    .bikes_information_filter>div {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    .bikes_information_filter {
+        /* border: 3px solid black; */
+        width: 200px;
+    }
+
+    .filter_details form {
+        align-items: center;
+    }
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1070px) {
+    .products_details {
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(4, 360px);
+        place-content: center;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .products_details {
+        grid-template-columns: repeat(1, 360px);
+        grid-template-rows: repeat(8, 360px);
+        /* border: 3px solid yellow; */
+        place-content: center;
+    }
+
+    .profile_details {
+        width: 320px;
+        height: 320px;
+    }
+
+    .profile_details img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .search_details>div {
+        width: 80%;
+    }
+
+    .buttons button {
+        width: 40px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width: 430px) {
+    .products_details {
+        grid-template-columns: repeat(1, 350px);
+        grid-template-rows: repeat(8, 360px);
+        place-content: center;
+    }
+
+    body {
+        margin: 0;
+    }
+
+
+
+}
+
+/* working on nav bar for mobile */
+
+@media only screen and (max-width: 1070px) {
+    .nav_bar_home_show_hide {
+        display: block;
+    }
+
+    .nav_bar,
+    .nav_bar_home {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (min-width: 1070px) {
+
+    .nav_bar_mobile,
+    .nav_bar_home_show_hide {
+        display: none !important;
+    }
+
+}
+
+
+
+
+
+/* working on search input box for mobile */
+
+@media only screen and (max-width: 1245px) {
+    .search_details>div {
+        width: 50%;
+    }
+
+}
+
+
+@media only screen and (max-width: 890px) {
+    .search_details>div {
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .search_details>div {
+        width: 80%;
+    }
+
+}
+
+
+/* @media only screen and (min-width: 770px) {
+    .products_details {
+        grid-gap: 40px;
+    }
+} */
+
+/* @media only screen and (min-width: 800px) {
+    .products_details {
+        grid-gap: 50px;
+    }
+} */
+
+/* @media only screen and (min-width: 860px) {
+    .products_details {
+        grid-gap: 60px;
+    }
+} */
+
+/* @media only screen and (min-width: 880px) {
+    .products_details {
+        grid-gap: 70px;
+    }
+} */
+
+/* @media only screen and (min-width: 900px) {
+    .products_details {
+        grid-gap: 90px;
+    }
+} */
+
+/* @media only screen and (min-width: 920px) {
+    .products_details {
+        grid-gap: 100px;
+    }
+} */
+
+/* @media only screen and (min-width: 935px) {
+    .products_details {
+        grid-gap: 110px;
+    }
+} */
+
+/* @media only screen and (min-width: 950px) {
+    .products_details {
+        grid-gap: 120px;
+    }
+} */
+
+/* @media only screen and (min-width: 970px) {
+    .products_details {
+        grid-gap: 130px;
+    }
+} */
+
+/* @media only screen and (min-width: 1500px) {
+    .products_details {
+        grid-gap: 40px;
+    }
+} */
+
+/* @media only screen and (min-width: 1550px) {
+    .products_details {
+        grid-gap: 50px;
+    }
+} */
+
+/* @media only screen and (min-width: 1600px) {
+    .products_details {
+        grid-gap: 70px;
+    }
+} */

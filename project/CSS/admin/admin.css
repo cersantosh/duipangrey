@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    /* border: 3px solid blue; */
+    color: white;
+    padding: 10px;
+}
+
+.container div p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper>div,
+.order_details>div {
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+    /* border: 3px solid red; */
+    position: relative;
+    margin: 20px;
+}
+
+.wrapper>div>div,
+.order_details>div>div {
+    background-color: #303952;
+}
+
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.order_details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 3px solid black; */
+
+}
+
+.users {
+    background-color: #00c0ef;
+    opacity: 0.8;
+}
+
+.bikes {
+    opacity: 0.8;
+    background-color: #de9315;
+}
+
+.scooters {
+    opacity: 0.8;
+    background-color: #ba4030;
+}
+
+.message {
+    opacity: 0.8;
+    background-color: #318360;
+}
+
+.bikes_ordered {
+    opacity: 0.8;
+    background-color: rgb(236, 19, 187);
+}
+
+.scooters_ordered {
+    opacity: 0.8;
+    background-color: rgb(0, 102, 165);
+}
+
+.bikes_ordered p:nth-child(2),
+.scooters_ordered p:nth-child(2) {
+    font-size: 15px;
+}
+
+i:not(.link i) {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    /* border: 3px solid blue; */
+    z-index: -1;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.link {
+    width: 100%;
+    /* border: 3px solid red; */
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    text-align: center;
+    padding: 7px;
+}
+
+
+
+
+@media only screen and (max-width: 1030px) {
+
+    .wrapper,
+    .order_details {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 150px);
+        grid-gap: 20px;
+    }
+
+    .order_details {
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    .wrapper {
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(4, 150px);
+        /* grid-gap: 20px; */
+    }
+
+    .order_details {
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(2, 150px);
+    }
+
+    .container {
+        min-height: 100px;
+    }
+
+    body {
+        height: auto;
+    }
+}

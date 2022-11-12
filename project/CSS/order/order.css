@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.verification {
+    width: 350px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.container {
+    width: 350px;
+    min-height: 200px;
+    /* background-color: #45aaf2; */
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+.products {
+    width: 100%;
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.image_details {
+    border: 2px solid red;
+    width: 100%;
+    position: relative;
+}
+
+.image_prev,
+.image_next {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.image_prev {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 5px;
+}
+
+.image_next {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 5px;
+}
+
+.image_details:hover>span {
+    visibility: visible;
+}
+
+.products div {
+    /* border: 3px solid green; */
+}
+
+.products *:not(.image_details, img) {
+    margin-top: 10px;
+}
+
+.products a {
+    /* border: 3px solid blue; */
+}
+
+.products img {
+    width: 100%;
+    display: none;
+    /* border: 3px solid red; */
+}
+
+.contact {
+    width: 100%;
+    padding: 10px;
+    /* border: 3px solid red; */
+}
+
+.contact label {
+    /* width: 60%; */
+    /* border: 3px solid blue; */
+    font-size: 16px;
+}
+
+.contact input {
+    height: 40px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 17px;
+    width: 50%;
+    margin-left: 20px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: default;
+    user-select: none;
+    /* border: 3px solid red; */
+}
